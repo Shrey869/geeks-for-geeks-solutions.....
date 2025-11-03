@@ -1,0 +1,10 @@
+class Solution:
+    def maxEdgesToAdd(self, V, edges):
+        # Number of existing edges
+        E = len(edges)
+
+        # Maximum edges possible in a DAG = V*(V-1)/2
+        max_possible_edges = (V * (V - 1)) // 2
+
+        # Maximum additional edges that can be added
+        return max_possible_edges - E
